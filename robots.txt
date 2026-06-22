@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sport.jo3.org/sitemap.xml
+Sitemap: https://sport.jo3.org/sitemap.html

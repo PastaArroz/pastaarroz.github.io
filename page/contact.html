@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    
+    <meta name="title" content="Privacy Policy">
+    <meta name="description" content="Privacy Policy Page">
+	<meta name="author" content="admin">
+    <link rel="canonical" href="/page/privacy.html">
+    
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#378d8a">
+    <style>
+        /* BASE RESET */
+        html{font-size:16px;line-height:1.5}
+        body{margin:0;background:#edf1f2;color:#4c5560;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+        a{text-decoration:none;color:#2675A6;transition:.2s}
+        a:hover{color:#636363}
+        #content-wrap a{text-decoration:underline;text-underline-offset:2px}
+        #content-wrap a:hover{text-decoration-thickness:2px}
+        img{max-width:100%;height:auto}
+
+        /* HEADER */
+        #header-outer{width:100%}
+        #header-wrap{background:#424a56}
+        #header-content{max-width:980px;margin:0 auto;padding:0 36px;min-height:60px;display:flex;align-items:center}
+        .blog-title{margin:0;font-size:28px;text-transform:uppercase;font-weight:700}
+        .blog-title a{color:#fff}
+
+        /* NAVIGATION */
+        #navmenu-wrap{background:#1f6664;width:100%}
+        .navmenu{max-width:980px;margin:0 auto;padding:0 36px}
+        .navmenu-content ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap}
+        .navmenu-content ul li{position:relative;margin-right:20px}
+        .navmenu-content ul li a{color:#f7fbff;font-weight:700;font-size:14px;line-height:52px;display:block;text-transform:uppercase}
+        .navmenu-content ul li a:hover{color:#ffffff;background:rgba(255,255,255,0.1)}
+
+        /* DROPDOWN */
+        .navmenu-content ul li ul{position:absolute;top:52px;left:0;background:#fff;box-shadow:0 5px 20px rgba(0,0,0,0.1);display:none;min-width:200px;z-index:99}
+        .navmenu-content ul li:hover ul{display:block}
+        .navmenu-content ul li ul li{margin:0;display:block;border-bottom:1px solid #eee}
+        .navmenu-content ul li ul li a{color:#636363;padding:10px 20px;line-height:normal;text-transform:none;font-weight:500}
+        .navmenu-content ul li ul li a:hover{color:#378d8a;background:#f9f9f9}
+
+        /* LAYOUT */
+        #wrapper{max-width:980px;margin:20px auto;display:flex;flex-wrap:wrap;background:#fff;padding:36px;box-sizing:border-box}
+        #content-wrap{flex:1 1 68%;max-width:68%;padding-right:36px;box-sizing:border-box}
+        #sidebar-wrap{flex:1 1 32%;max-width:32%;box-sizing:border-box}
+
+        /* WIDGETS */
+        .widget{margin-bottom:30px}
+        .widget h2.title, .normalwidget-title h2.title{font-size:16px;text-transform:uppercase;border-bottom:2px solid #1f6664;padding-bottom:8px;margin-bottom:20px;color:#1f2a36;font-weight:700}
+        .rudi-ad-slot{margin:14px 0;padding:0;overflow:hidden}
+        .rudi-ad-slot[data-lazy-ad]{min-height:0}
+        
+        .popular-posts ul{list-style:none;padding:0}
+        .popular-posts li{margin-bottom:12px;border-bottom:1px solid #f0f0f0;padding-bottom:12px}
+        .popular-posts li a{font-weight:600;font-size:14px;color:#2f3a47;display:block;line-height:1.4}
+        .popular-posts li a:hover{color:#1f6664}
+
+        /* FOOTER */
+        #footer-outer{background:#2d2d2d;color:#bbb;padding:40px 0;margin-top:20px}
+        #footer-content{max-width:980px;margin:0 auto;text-align:center;font-size:14px}
+        .footer-links {margin-top: 15px;}
+        .footer-links a {color: #ccc; margin: 0 10px; font-size: 13px;}
+        .footer-links a:hover {color: #fff;}
+
+        /* FLOATING AD */
+        .rudi-floating-ad{position:fixed;left:0;right:0;bottom:16px;margin:0 auto;z-index:9999;width:min(340px,calc(100vw - 24px));max-height:80vh;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:8px;box-shadow:0 14px 38px rgba(0,0,0,0.22);overflow:auto}
+        .rudi-floating-ad.hidden{display:none}
+        .rudi-floating-ad-close{position:absolute;top:6px;right:6px;width:28px;height:28px;border:none;border-radius:999px;background:rgba(0,0,0,0.6);color:#fff;font-size:18px;line-height:1;cursor:pointer;z-index:2}
+        .rudi-floating-ad-content{padding:0}
+
+        /* LAZY LOAD & SPINNERS */
+        .lazyload{opacity:0;transition:opacity .3s}
+        .lazyload.loaded{opacity:1}
+        .lazy-loading{position:absolute;top:0;left:0;width:100%;height:100%;background:#eef2f4;display:flex;align-items:center;justify-content:center;z-index:1}
+        .lazy-loading::before{content:"";width:24px;height:24px;border:3px solid rgba(31,102,100,0.25);border-top-color:#1f6664;border-radius:50%;animation:rudi-spin .8s linear infinite}
+        @keyframes rudi-spin{to{transform:rotate(360deg)}}
+        .lazyload.loaded + .lazy-loading {display:none}
+
+        /* RESPONSIVE */
+        @media (max-width:900px){
+            #content-wrap{flex:1 1 100%;max-width:100%;padding-right:0}
+            #sidebar-wrap{flex:1 1 100%;max-width:100%;margin-top:40px}
+            .post-outer{flex:1 1 100%;max-width:100%}
+        }
+		
+    .post-header{margin-bottom:30px;border-bottom:1px solid #eee;padding-bottom:20px;}
+    .post-header h1{font-size:28px;line-height:1.3;margin:0 0 10px;color:#333;font-weight:700;}
+    .post-meta{font-size:12px;color:#4b5563;text-transform:uppercase;}
+    .post-meta a{color:#1f4f4d;font-weight:700;text-decoration:underline;}
+    .post-body{font-size:16px;line-height:1.7;color:#444;}
+    .post-body p{margin-bottom:20px;}
+    .post-body h2, .post-body h3{color:#333;margin-top:30px;margin-bottom:15px;}
+    .featured-image{margin-bottom:25px;border-radius:4px;overflow:hidden;position:relative;}
+    .featured-image img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;}
+    
+    .article-image {margin: 20px 0;text-align:center;position:relative;aspect-ratio:16/9;background:#eef2f4;border-radius:4px;overflow:hidden;}
+    .article-image img {max-width: 100%; height: 100%; width:100%; border-radius: 4px; object-fit:cover; display:block;}
+    
+    /* Member-only overlay */
+    .member-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 100%);
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .member-overlay .mo-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 14px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.18);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid rgba(255,255,255,0.30);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .member-overlay .mo-icon svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    .member-overlay .mo-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.80);
+        margin-bottom: 8px;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .member-overlay .mo-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        box-shadow: 0 4px 25px rgba(102,126,234,0.45), 0 0 0 0 rgba(102,126,234,0.4);
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(.4,0,.2,1);
+        text-decoration: none;
+        animation: mo-pulse 2.5s infinite;
+    }
+    .member-overlay .mo-btn:hover {
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 8px 35px rgba(102,126,234,0.6), 0 0 0 0 rgba(102,126,234,0.5);
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+    .member-overlay .mo-btn svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: transform 0.3s ease;
+    }
+    .member-overlay .mo-btn:hover svg {
+        transform: translateX(3px);
+    }
+    .member-overlay .mo-sub {
+        font-size: 11px;
+        color: rgba(255,255,255,0.60);
+        margin-top: 10px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+    }
+    @keyframes mo-pulse {
+        0%   { box-shadow: 0 4px 25px rgba(102,126,234,0.45), 0 0 0 0 rgba(102,126,234,0.4); }
+        70%  { box-shadow: 0 4px 25px rgba(102,126,234,0.45), 0 0 0 12px rgba(102,126,234,0); }
+        100% { box-shadow: 0 4px 25px rgba(102,126,234,0.45), 0 0 0 0 rgba(102,126,234,0); }
+    }
+
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin: 25px 0;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+    }
+    </style>
+</head>
+<script src="https://pub.informacion.my.id/pub.js"></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5015759,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5015759&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+<body class="@yield('body_class')">
+
+    <header id="header-outer">
+        <div id="header-wrap">
+            <div id="header-content">
+                <h2 class="blog-title">
+                    <a href="/">Contact Us</a>
+                </h2>
+            </div>
+        </div>
+        <div id="navmenu-wrap">
+            <div class="navmenu">
+                <nav class="navmenu-content">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/page/contact.html">Contact</a></li>
+                        <li><a href="/page/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/page/dmca.html">DMCA</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="wrapper">
+        <section id="content-wrap">
+
+<div class="main-content section">
+    <article class="post">
+        <header class="post-header" style="margin-bottom:30px;border-bottom:1px solid #eee;padding-bottom:20px;">
+            <h1 style="font-size:28px;line-height:1.3;margin:0 0 10px;color:#333;font-weight:700;">Contact Us</h1>
+        </header>
+
+        <div class="post-body" style="font-size:16px;line-height:1.7;color:#444;">
+            <p>Have any question, comment, suggestion or news tip to pass along to This Site?</p>
+            <p>We are open to discuss all of the possibilities with you. This page offering the right way to sent any comments to admin related to your feedback, news coverage and other issues related to this site.</p>
+            <p>We are happy to hear information from you please write a subject format:</p>
+            <ul>
+                <li><strong>Claim Picture</strong> [picture name] [url to real picture] : if you are the real owner to claim your picture and need back links.</li>
+                <li><strong>Submit Wallpapers</strong> [wallpaper name] : if you wanna submit your or your wallpaper design to us.</li>
+                <li><strong>Advertise</strong> : if you interested to advertising on our site.</li>
+                <li><strong>Support</strong> : if you need our support.</li>
+            </ul>
+            <p>And send all your inquiries to our official email at: <strong>velina007@gmail.com</strong></p>
+        </div>
+    </article>
+</div>
+</section>
+
+        <aside id="sidebar-wrap">
+            <div class="sidebar section" id="sidebar">
+                <div class="widget HTML" style="position: sticky; top: 20px; z-index: 10;">
+                    <h2 class="title"></h2>
+                    <div class="widget-content popular-posts">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            
+                                <li style="display: flex; align-items: flex-start; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 20px;">
+                                    
+                                    <div class="img-thumbnail" style="width: 80px; height: 60px; flex-shrink: 0; margin-bottom: 0; margin-right: 15px; border-radius: 4px; overflow: hidden; padding-top: 0; background: #eee;">
+                                        
+                                    </div>
+                                    
+                                </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer id="footer-outer">
+        <div id="footer-content">
+            <div class="footer-text">
+                &copy; 2026. All Rights Reserved.
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/page/contact.html">Contact</a>
+                <a href="/page/privacy.html">Privacy Policy</a>
+                <a href="/page/dmca.html">DMCA</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
